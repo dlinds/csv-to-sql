@@ -6,12 +6,18 @@ This repo is used to convert a CSV to a batch of SQL insert files. There's proba
 - converts the JSON to SQL
 - outputs at different batch sizes to .SQL files
 
+You need to make sure whatever CSV your converting has the same column names as the table you're inserting into.
+
 ## Usage
 
-1. Update the `constants.js` file with the appropriate values
-2. Run `node index.js` in your terminal
-3. Get the outputted files from the `output_sql_files` directory
-4. Import them into MySQL
+Install packages with `yarn install`
+
+1. Add your CSV to the `input_csv_files` directory
+   - make sure the column names match your table that you're inserting into
+2. Update the `constants.js` file with the appropriate values
+3. Run `node index.js` in your terminal
+4. Get the outputted files from the `output_sql_files` directory
+5. Import them into MySQL
 
 ## Notes
 
